@@ -1,105 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-      <meta charset="utf-8">
-    <style>
-    body {
-      background-image:url('python.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    .center{
-      text-align:center;
-    }
-    
-    .intro{
-      background-color: orange;
-      color: black;
-      border : 2px;
-      margin: 100px;
-      padding: 100px;
-      text-align: center;
-    }
-      
-      .options {
-        background-color: green;
-        color: white;
-        border: 2px solid black;
-        margin: 20px;
-        padding: 20px;
-        
-      }
-      
-      h1 {display:inline-block}
-      
-      .flex-container {
-        display:flex;
-        background-color:yellow;
-        
-      }
-      .flex-container > div {
-        background-color:#f1f1f1;
-        margin: 10px;
-        padding: 20px;
-        font-size: 30px;
-        
-      }
-      
-      
-      
-    </style>
-    
-  </head>
+<html lang="en">
+<head>
+<title>Coding Camp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #C4A484;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+img{
+  width:100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
 <body>
-  
-<div class="center">
-<h1 style="background-color:black;color:white;font-size:200%;"><b
->Bootcamp for Beginners</b></h1>
+
+<div class="header">
+  <h1>Coding Camp</h1>
+  <p>Learning coding from scratch</p>
 </div>
 
-<div class="intro">
-  <h2 style="font-size:250%">Ultimate Goal!</h2>
-  <p style="font-size:160%;">Our goal in Bootcamp for Beginners is to ultmitely help other individuals who are striving into looking at a career related to a computer science field or any other! Here you will embark in a journey where everything you learn will be applied into the real world. The top three computer laguages that we'll be teaching you is Python, C++, and HTML. Let out journey begin...</p>
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="page4.html">About Us</a>
+  <a href="page1.html">HELP</a>
+  <a href="#" class="right">Share</a>
 </div>
-  
 
-  
-  <div class="options">
-  <h2>HTML</h2>
-  <p>This option will teach you all about HTML</p>
-  <button onclick="document.location='course.html'">HTML Course</button>
-  </div>
-  
-  <div class="options">
-  <h2>Python</h2>
-  <p>This option will teach you about Python</p>
-  <button onclick="document.location='python.html'">Python Course</button>
-  </div>
+<div class="row">
+  <div class="side">
+    <h2>Organization</h2>
+    <h5>SUNY Orange</h5>
+    <img src="suny.jpg" alt="sunyorange" style="height:400px;">
+    <p>SUNY Orange contributes to those who want to learn coding</p>
+    <h3>Site/Map</h3>
+    <p>Middletown, NY</p>
+    <img src="image5.jpg" alt="Site" sytle="height:500px;">
 
-  
-  <div class="options">
-  <h2>C++</h2>
-  <p>This option will teach you about C++</p>
-  <button onclick="document.location='ccourse.html'">C++ Course</button>
+
   </div>
-  
-  
-    
-  
-    <nav>
-     <div class="flex-container">
-    
-    <div><a href="page1.html">HELP</a></div>
-    <div><a href="page2.html">Contact</a></div>
-    <div><a href="page3.html">Share</a></div>
-    <div><a href="page4.html">About Us</a></div>
-     
-     </div>
+  <div class="main">
+    <h2>Introduction</h2>
+    <h5>Our Mission</h5>
+    <img src="coffee.png" alt="Map" style="height:800px;">
+    <p>Our goal in Bootcamp for Beginners is to ultmitely help other individuals who are striving into looking at a career related to a computer science field or any other! Here you will embark in a journey where everything you learn will be applied into the real world. The top three computer laguages that we'll be teaching you is Python, C++, and HTML. Let out journey begin</p>
+    <br>
+
+    <h2>HTML and CSS</h2>
+    <h5>Entry Level</h5>
+    <img src="html.jpg" alt="HTML Coding" style="height:900px;">
+    <p>Here you will learn the basic level of HTML and CSS to understand what coding looks like!</p>
+      <button onclick="document.location='course.html'">HTML & CSS</button>
+    <br>
+
+    <h2>Python</h2>
+    <h5>Intermediate</h5>
+    <img src="python.jpg" alt="Python Programming" style="height:900px;">
+    <p>Here you will have a bigger glimpse with Python</p>
+    <button onclick="document.location='python.html'">Python Course</button>
+    <br>
+
+    <h2>C++</h2>
+    <h5>Difficult</h5>
+    <img src="c++.jpg" alt="C++ Programming" style="height:900px;">
+    <p>Here you will everything about C++</p>
+      <button onclick="document.location='ccourse.html'">C++</button>
+    <br>
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <nav>
+    <a href="index.html" class="active">Home</a> | <a href="page4.html">About Us</a> | <a href="#">Share</a> |
+    <a href="page1.html" class="right">Help</a>
     </nav>
- 
-  
-  
+</div>
+
 </body>
 </html>
